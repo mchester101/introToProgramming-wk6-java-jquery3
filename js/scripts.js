@@ -2,10 +2,13 @@ $(document).ready(function() {
   $("button#hello").click(function() {
     $("ul#user").prepend("<li>Hello!</li>");
     $("ul#webpage").prepend("<li>Why hello there!</li>");
-    $('li').click(function() {
+    $("ul#user").children("li").first().click(function() {
       alert('hi');
-    });
+    $("ul#webpage").children("li").first().click(function() {
+        alert('hi');                
+    });  
   });
+});
 
   $("button#goodbye").click(function() {
     $("ul#user").prepend("<li>Goodbye!</li>");
